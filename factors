@@ -32,8 +32,6 @@ def pollards_rho(n):
         d = gcd(abs(x-y), n)
     return d
 
-import sys
-
 def factorize_numbers():
     if len(sys.argv) < 2:
         print("Usage: factors <file>")
@@ -50,5 +48,3 @@ def factorize_numbers():
             print(f"{n}={p}*{q}")
     except:
         pass
-
-factorize_numbers()
