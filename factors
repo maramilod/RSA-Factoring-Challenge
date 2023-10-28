@@ -65,7 +65,7 @@ def factorize_numbers():
         for n in numbers:
             p = pollards_rho(n)
             q = n // p
-            print(f"{n}={p}*{q}")
+            print(f"{n}={q}*{p}")
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
