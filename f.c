@@ -8,11 +8,9 @@
 int factorize(char *buffer)
 {
 
-	u_int32_t num;
-	u_int32_t i;
+	u_int32_t num, i;
 
 	num = atoi(buffer);
-
 
 	for (i = 2; i < num; i++)
 		if (num % i == 0)
