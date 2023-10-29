@@ -8,20 +8,6 @@ y
 """
 
 
-def isprime(n):
-    if n <= 1:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    sqrt_n = math.isqrt(n)
-    for i in range(3, sqrt_n + 1, 2):
-        if n % i == 0:
-            return False
-    return True
-
-
 def read_numbers_from_file(filename):
     """
     d
@@ -70,8 +56,6 @@ def factorize_numbers():
     try:
         for n in numbers:
             p = pollards_rho(n)
-            while not isprime(p):
-                p = pollards_rho(n)
             q = n // p
             print(f"{n}={q}*{p}")
     except Exception as e:
